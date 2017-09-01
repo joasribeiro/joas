@@ -4,22 +4,24 @@
 		*/
 		class Professor
 		{
-			
-			function __construct(argument)
+			protected $Professor;
+			protected $materiais=[];
+
+			public function AdicionarMaterial(Material $materiais)
 			{
-				# code...
+				$this->materiais=$materiais;
 			}
+
+			public function getmateriais(){
+				return $this->materiais;
+			}
+
+			
+
 		}
 
 		/**
 		* 
 		*/
-		class funcionario
-		{
-			
-			function __construct(argument)
-			{
-				# code...
-			}
-		}
+		
  ?>

@@ -11,14 +11,14 @@
 
 
 
-			public function __construct($descricao,$tipo)
-			{
-				$this->descricao=$descricao;
-				$this->tipo=$tipo;
-				// $this->estado=$estado;
+			// public function __construct($descricao,$tipo)
+			// {
+			// 	//$this->descricao=$descricao;
+			// 	//$this->tipo=$tipo;
+			// 	// $this->estado=$estado;
 
 
-			}
+			// }
 
 			public function setdescricao($descricao){
 				 $this->descricao=$descricao;
@@ -50,15 +50,19 @@
 
 				$this->estado=$estado;
 
+				if($this->estado=="problema"){
+					echo "este material esta indisponivel no momento pois esta em manutenção";
+				}else if($estado=="bom"){
+				
+					echo "bom proveito!!!";
+				}else{
+					echo"indefinido";
+				}
+
 			}
 			public function getestado(){
-				if($this->estado="problema"){
-					echo "este material esta indisponivel no momento pois esta em manutenção";
-				}else{
-					return $this->estado;
-					echo "bom proveito!!!";
-				}
 				
+				return $this->estado;
 
 			}
 			public function setquantidade($quantidade){
