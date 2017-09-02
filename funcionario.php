@@ -1,13 +1,17 @@
 <?php 
-		class Funcionario
+		class Funcionario 
 		{
 
 			protected $funcionario;
 
 			
-			public function Emprestar(Material $Material, Professor $Professor)
+			public function Emprestar(Material $material, Professor $professor)
 			{
-				# code...
-			}
+				
+					
+
+				 $professor->AdicionarMaterial($material,$professor);
+				
+					}
 		}
  ?>

@@ -16,26 +16,37 @@ require 'funcionario.php';
 
 
 $prof = new Professor();
+$prof->setprofessor("joas");
 
 $funcionario = new Funcionario();
 
 $mat = new Material();
+$mat2= new Material();
 
 //$funcionario->Emprestar($mat,$prof);
 $mat->setpatrimonio("R001");
 $mat->setdescricao("APPLE");
 $mat->settipo("NOTEBOOK");
 
-$prof->adicionarMaterial($mat);
+$mat2->setpatrimonio("R001");
+$mat2->setdescricao("acer");
 
 
-$exibirmat=$prof->getmateriais();
+$funcionario->Emprestar($mat2,$prof);
+$funcionario->Emprestar($mat2,$prof);
+//$prof->AdicionarMaterial($mat);
+//$prof->AdicionarMaterial($mat2);
+$prof->getmateriais();
+
+
 var_dump($prof);
+//var_dump($funcionario);
+
 
 
  //$novo=new material();
 
-// // $estado = new material;
+// // $estado = new materi
  //$novo->setdescricao('afffff');
 //$material->setestado("aaa");
 
