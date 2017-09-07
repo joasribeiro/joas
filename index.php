@@ -16,27 +16,27 @@ require 'funcionario.php';
 
 
 $prof = new Professor();
-$prof->setprofessor("joas");
+$profjoas->setprofessor("joas");
 
 $funcionario = new Funcionario();
 
-$mat = new Material();
-$mat2= new Material();
+$apagador = new apagador();
+$notebook = new notebook();
 
-//$funcionario->Emprestar($mat,$prof);
-$mat->setpatrimonio("R001");
-$mat->setdescricao("APPLE");
-$mat->settipo("NOTEBOOK");
+$apagador->setpatrimonio("R001");
+$apagador->setdescricao("APPLE");
+$apagador->settipo("apagador");
+$apagador->setestado("bom");
 
-$mat2->setpatrimonio("R001");
-$mat2->setdescricao("acer");
+$notebook->setpatrimonio("R001");
+$notebook->setdescricao("notebook");
+$notebook->setestado("bom");
 
 
-$funcionario->Emprestar($mat2,$prof);
-$funcionario->Emprestar($mat2,$prof);
-//$prof->AdicionarMaterial($mat);
-//$prof->AdicionarMaterial($mat2);
-$prof->getmateriais();
+$funcionario->Emprestar($apagador,$profjoas);
+$funcionario->Emprestar($notebook,$prof);
+
+
 
 
 var_dump($prof);
