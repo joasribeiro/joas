@@ -54,7 +54,7 @@
 					echo "este material esta indisponivel no momento pois esta em manutenção";
 				}else if($estado=="bom"){
 				
-					echo "bom proveito!!!";
+					echo "bom proveito!!!\n";
 				}else{
 					echo"indefinido";
 				}

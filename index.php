@@ -16,7 +16,7 @@ require 'funcionario.php';
 
 
 $prof = new Professor();
-$profjoas->setprofessor("joas");
+$prof->setprofessor("joas");
 
 $funcionario = new Funcionario();
 
@@ -33,8 +33,8 @@ $notebook->setdescricao("notebook");
 $notebook->setestado("bom");
 
 
-$funcionario->Emprestar($apagador,$profjoas);
-$funcionario->Emprestar($notebook,$prof);
+$funcionario->Emprestar($prof,$apagador);
+$funcionario->Emprestar($prof,$notebook);
 
 
 
